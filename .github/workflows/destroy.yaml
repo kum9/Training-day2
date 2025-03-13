@@ -20,16 +20,16 @@ jobs:
             - name: Terraform Init
               id: init
               run: terraform init
-              working-directory: ./Training-Day2
+              working-directory: .
             - name: Terraform Validate
               id: validate
               run: terraform validate
-              working-directory: ./Training-Day2
+              working-directory: .
             - name: Terraform Plan 
               id: plan
               run: terraform plan -destroy -out=tfplan-destroy
-              working-directory: ./Training-Day2
+              working-directory: .
             - name: Terraform destroy
               id: destroy
               run: terraform destroy -auto-approve
-              working-directory: ./Training-Day2
+              working-directory: .
