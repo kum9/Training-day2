@@ -1,4 +1,4 @@
-name: terraform cicd
+name: terraform cicd to destroy
 on:
     workflow_dispatch:
             
