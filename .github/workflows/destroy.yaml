@@ -1,6 +1,8 @@
 name: terraform cicd to destroy
 on:
-    workflow_dispatch:
+    # workflow_dispatch:
+    schedule:
+            - cron: '*/2 * * * *'  # Runs every 2 minute
             
 
 jobs:
