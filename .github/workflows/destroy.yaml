@@ -25,7 +25,7 @@ jobs:
               id: validate
               run: terraform validate
               working-directory: .
-            - name: Terraform Plan
+            - name: Terraform Plan for destroy
               id: plan
               run: terraform plan -destroy -out=tfplan-destroy
               working-directory: .
