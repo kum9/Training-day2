@@ -4,7 +4,7 @@ on:
             
 
 jobs:
-    build:
+    destroy:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -27,9 +27,9 @@ jobs:
               working-directory: .
             - name: Terraform Plan
               id: plan
-              run: terraform plan
+              run: terraform plan -destroy -out=tfplan-destroy
               working-directory: .
             - name: Terraform destroy
-              id: destroy
+              id: apply
               run: terraform destroy -auto-approve
               working-directory: .
